@@ -1,0 +1,35 @@
+shuffle game
+
+Hint: use methods (return and non-return), interface, main method, classes, if statement, print statement, recursion, random,
+
+int[] array = {1,0,1};
+
+print (welcome message and instructions)
+------------------------------welcome to shuffle game--------------------------------
+guess where the 0 is ?
+
+ask user if ready to start
+are you ready to play? y/n (handle add entry cases -lowercase uppercase, number, special character, any text-)
+
+if y:
+shuffle the game (invoke shuffle game method - shuffle game method will be provided)
+
+ask user to choose position
+pick 1, 2 or 3! (handle add entry cases -lowercase uppercase, different number, special character, any text-)
+
+print results of user guess
+if good guess:
+good guess!
+
+if not good guess:
+sorry!!! wrong guess
+
+ask if user wants to play again
+do you want to try again? y/n (handle add entry cases -lowercase uppercase, different number, special character, any text-)
+
+if y:
+loop the game (use recursive)
+if n:
+
+print (wellfare message)
+---------------------------------see you next time!-----------------------------------
