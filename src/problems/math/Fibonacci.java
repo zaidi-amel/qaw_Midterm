@@ -9,9 +9,20 @@ public class Fibonacci {
      *
     */
 
-    public static void main(String[] args) {
+    public static int FibonacciNumber(int n) {
+        if (n == 0)
+            return 0;
+        else if (n == 1)
+            return 1;
+        else
 
-        //run your code here
+            return FibonacciNumber(n - 1) + FibonacciNumber(n - 2);
+    }
+    public static void main(String args[]){
+
+        for (int i=0;i<=30; i++){
+            System.out.println(FibonacciNumber(i));
+        }
 
 
     }

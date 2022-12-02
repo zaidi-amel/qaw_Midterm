@@ -2,47 +2,59 @@ Please answer the below Data Structure Questions:
 
 Q. why do we need data structure?
 A.
-
+Data structure is important for storing, organizing and managing data so that we can access and modify it efficiently
 ------------------------------------------------------------------------------------------------------------------------
 What are the various operations that can be performed on different Data Structures?
 A.
-
+Searching in a data structure, insertion of data, deletion, selection, update, sort, split
 ------------------------------------------------------------------------------------------------------------------------
 Q. List out the areas in which data structures are applied extensively?
 A.
-
+In Artificial Intelligence, numerical analysis, statistical analysis, database management system, compiler design
 ------------------------------------------------------------------------------------------------------------------------
 Q. What is an Array?
 A.
-
+An array is a data structure in which we can store multiple values in a single variable.
+In an array, the elements are indexed and the first element has the index 0.
 ------------------------------------------------------------------------------------------------------------------------
 Q. What is the difference between the Array and ArrayList?
 A.
-
+The difference between them is that Array's size can't be modified, if we want to add or remove elements
+we have to create a new one, while in Arraylist we can add and remove elements as we want.
 ------------------------------------------------------------------------------------------------------------------------
 Q. What is LinkedList?
 A.
-
+LinkedList uses a doubly linked list to store items.  The elements are linked using pointers and addresses.
 ------------------------------------------------------------------------------------------------------------------------
 Q. How is an ArrayList different from Linked List?
 A.
+Arraylist has a regular list inside it and we can simply add elements into it, while in Linkedlist,
+the elements are linked so if we want to add an element, this element is placed into an existing element
+and an other one in the list (if it's in the middle).
 
 ------------------------------------------------------------------------------------------------------------------------
 Q. What is the difference between the HashTable and HashMap?
 A.
-
+A HashMap is not thread safe, while hashtable is thread safe and can be shared with multiple threads
 ------------------------------------------------------------------------------------------------------------------------
 Q. What are the major data structures used in the following areas : RDBMS, Network data model and Hierarchical data model?
 A.
-
+RDBMS: Array,
+Network data model: Graph,
+Hierarchical data model: Trees
 ------------------------------------------------------------------------------------------------------------------------
 Q. How HashMap works in java?
 A.
-
+Hashmap stores data in the pair of key and value. It can contain different types of data.
 ------------------------------------------------------------------------------------------------------------------------
 Q. What is ArrayIndexOutOfBoundsException in java? When it occurs?
 A.
-
+ArrayIndexOutOfBoundsException is a runtime exception. It occurs when an array is accessed with an illegal index.
 ------------------------------------------------------------------------------------------------------------------------
 Q. What are the different ways of copying an array into another array?
 A.
+
+Create a new array of the same length and copy each element.
+Using a variable assignment.
+Using a method called clone which creates a new array of the same size.
+Use System.arraycopy() method.

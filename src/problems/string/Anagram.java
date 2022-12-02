@@ -1,5 +1,7 @@
 package problems.string;
 
+import java.util.Arrays;
+
 public class Anagram {
 
     /*
@@ -10,9 +12,31 @@ public class Anagram {
      *
      */
 
+    public static void anagram(String str1, String str2) {
+        // check if length is same
+        if (str1.length() == str2.length()) {
+
+            // convert strings to char array
+            char[] charArray1 = str1.toCharArray();
+            char[] charArray2 = str2.toCharArray();
+            // sort the char array
+            Arrays.sort(charArray1);
+            Arrays.sort(charArray2);
+
+            boolean isAnagram = Arrays.equals(charArray1, charArray2);
+
+            if (isAnagram) {
+                System.out.println(str1 + " and " + str2 + " are Anagram.");
+            } else {
+                System.out.println(str1 + " and " + str2 + " are not Anagram.");
+            }
+        }
+    }
+
     public static void main(String[] args) {
 
-        //run your code here
+        anagram("ARMY","MARY");
+        anagram("look","cool");
 
     }
 

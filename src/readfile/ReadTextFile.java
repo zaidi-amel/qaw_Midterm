@@ -1,5 +1,10 @@
 package readfile;
 
+import java.io.*;
+import java.util.Arrays;
+import java.util.LinkedList;
+import java.util.Scanner;
+
 public class ReadTextFile {
     /*
      *
@@ -17,9 +22,39 @@ public class ReadTextFile {
      *
      */
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
+        FileReader fr = null;
+        BufferedReader br = null;
 
-        //write your code here
+
+        LinkedList<String> myList = new LinkedList<String>();
+        try {
+            br = new BufferedReader(new FileReader("C:\\Users\\amel\\OneDrive\\Documents\\QA\\Midterm\\java-coding-exam\\src\\readfile\\file-data"));
+            String str;
+            while ((str = br.readLine()) != null) {
+                System.out.println(str);
+
+                myList.add(Arrays.toString(str.split(" ")));
+
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            if (br != null) {
+                br.close();
+            }
+        }
+        System.out.println(myList);
+        System.out.println(myList.size());
+        //System.out.println(myList.get(0));
+
+
+
+
+
+
+
+
 
     }
 

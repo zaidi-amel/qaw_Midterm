@@ -15,9 +15,26 @@ public class MakePyramid {
 
      */
 
-    public static void main(String[] args) {
+    public static void makePyramid(int nbrLignes){
 
-        //write your code here
+        for (int nomLigne = 1; nomLigne <= nbrLignes; nomLigne++) {
+
+            for (int i = nbrLignes - nomLigne; i > 0; i--){
+                System.out.print(" ");
+            }
+
+
+            for (int i = 0; i < 2 * nomLigne - 1; i++){
+                System.out.print("*");
+            }
+
+            System.out.println();
+        }
+    }
+
+    public static void main(String[] args) {
+        makePyramid(8);
+
 
     }
 }

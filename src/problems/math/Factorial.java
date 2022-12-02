@@ -1,20 +1,17 @@
 package problems.math;
 
 public class Factorial {
-
-    /*
-     *
-     * factorial of 5! = 5 x 4 X 3 X 2 X 1 = 120
-     * write a java program to find Factorial of a given number
-     * you can use Recursion or Iteration
-     *
-     */
-
-    public static void main(String[] args) {
-
+    public static int CalculFactorial(int nbr){
+        if ((nbr==0) || (nbr==1)){
+            return 1;
+        }else{
+            return (nbr*CalculFactorial(nbr-1));
+        }
+    }
+    public static void main(String args[]) {
         //run your code here
+        System.out.println("Factorial of 6 is "+CalculFactorial(6));
 
 
     }
-
 }

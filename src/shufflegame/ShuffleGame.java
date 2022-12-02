@@ -1,5 +1,7 @@
 package shufflegame;
 
+import java.util.Arrays;
+import java.util.List;
 import java.util.Random;
 import java.util.Scanner;
 import java.util.concurrent.ThreadLocalRandom;
@@ -32,7 +34,13 @@ public class ShuffleGame implements GameRoadMap{
      */
     public int playerGuess() {
         //implement here
-        return 0;
+        String pick;
+        pick = scanner.nextLine();
+        while (!(pick.equalsIgnoreCase("1")) && !(pick.equalsIgnoreCase("2")) && !(pick.equalsIgnoreCase("3"))) {
+            System.out.println("invalid entry, please enter 1, 2 or 3");
+            pick = scanner.nextLine();
+        }
+        return Integer.parseInt(pick);
     }
 
     /**
@@ -43,6 +51,15 @@ public class ShuffleGame implements GameRoadMap{
      */
     public void checkGuess(int[] shuffledArray, int playerGuess) {
         //implement here
+
+        //System.out.println("player guess index "+playerGuess+" and check calcul "+shuffledArray[playerGuess]);
+        int index = playerGuess - 1;
+        if (shuffledArray[index] == 0) {
+            System.out.println("Good Guess! ");
+        } else {
+            System.out.println("Sorry !! Wrong Guess ");
+        }
+
     }
 
     /**
@@ -50,7 +67,45 @@ public class ShuffleGame implements GameRoadMap{
      * uses the method recursion in order to loop in the game
      */
     public void play() {
-        //implement here
+        System.out.println("------------------------------welcome to shuffle game--------------------------------\n" +
+                "guess where the 0 is ?");
+        String tryAgainAnswer = null;
+        do {
+            //implement here
+
+
+            //Ask player if ready or not
+            System.out.println("Are you ready to play? y/n ");
+            String answer = scanner.nextLine();
+
+            while (!(answer.equalsIgnoreCase("Y")) && !(answer.equalsIgnoreCase("N"))) {
+                System.out.println("invalid entry, please enter y or n");
+                answer = scanner.nextLine();
+            }
+
+            if (answer.equalsIgnoreCase("y")) {
+                int[] shuffledArray = shuffleGame(array);
+
+                //ask user to pick a position
+                System.out.println("pick 1, 2 or 3! ");
+                System.out.println("shuffeled array " + Arrays.toString(shuffledArray));
+                //System.out.println("reponse user guess "+playerGuess());
+                checkGuess(shuffledArray, playerGuess());
+                System.out.println("do you want to try again? y/n");
+                tryAgainAnswer = scanner.nextLine();
+                while (!(tryAgainAnswer.equalsIgnoreCase("Y")) && !(tryAgainAnswer.equalsIgnoreCase("N"))) {
+                    System.out.println("invalid entry, please enter y or n");
+                    tryAgainAnswer = scanner.nextLine();
+                }
+
+
+            }else {
+                break;
+            }
+
+        } while (tryAgainAnswer.equalsIgnoreCase("y"));
+        System.out.println("---------------------------------see you next time!-----------------------------------");
+
     }
 
 }

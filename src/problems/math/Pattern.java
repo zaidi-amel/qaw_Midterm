@@ -14,6 +14,14 @@ public class Pattern {
     public static void main(String[] args) {
 
         //write your code here
+        int number = 100;
+        System.out.println(number);
+        for (int i = 1; i < 5; i++){
+            for (int j = 0;j < 10; j++){
+                number = number- i;
+                System.out.println(number);
+            }
+        }
 
     }
 }

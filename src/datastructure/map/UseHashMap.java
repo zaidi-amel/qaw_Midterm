@@ -24,7 +24,11 @@ public class UseHashMap {
         map.put(6, "Seattle");
 
         //write your code here
-
+        for(int i = 1; i < map.size() + 1; i++){
+            System.out.println(map.get(i));
+        }
+        //print Denver
+        System.out.println(map.get(3));
 
     }
 }
